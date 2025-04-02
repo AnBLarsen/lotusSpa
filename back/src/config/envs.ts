@@ -5,7 +5,7 @@ import "dotenv/config";
 export const DB_URL: string | undefined = process.env.DB_URL;
 export const DB_TYPE: 'postgres' | 'mysql' = process.env.DB_TYPE as 'postgres' | 'mysql';
 export const DB_HOST: string = process.env.DB_HOST || 'localhost';
-export const DB_PORT: number = parseInt(process.env.DB_PORT || '5432', 10);  
+export const PORT: string | undefined = process.env.PORT || '3000'; 
 export const DB_USERNAME: string = process.env.DB_USERNAME || 'postgres';  
 export const DB_PASSWORD: string = process.env.DB_PASSWORD || '';
 export const DB_NAME: string = process.env.DB_NAME || 'my_database'; 
