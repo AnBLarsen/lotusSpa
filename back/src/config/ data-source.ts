@@ -2,6 +2,7 @@ import { DataSource, Repository } from "typeorm"
 import { User } from "../entities/User"
 import { Credential } from "../entities/Credential"
 import { DB_DROP, DB_SYNC, DB_TYPE, DB_URL, DB_ENTITIES } from "./envs"
+import { Appointment } from "../entities/Appointment"
 
 
 export const AppDataSource = new DataSource({
@@ -9,7 +10,7 @@ export const AppDataSource = new DataSource({
     type: DB_TYPE,
     url: DB_URL,
     synchronize: DB_SYNC,
-    entities: DB_ENTITIES,
+    entities: [User, Credential, Appointment],
     dropSchema: DB_DROP,
    
 })
