@@ -27,3 +27,5 @@ export const DB_ENTITIES: string[] = process.env.DB_ENTITIES ? process.env.DB_EN
 
 export const DB_DROP:boolean = process.env.DB_DROP ? process.env.DB_DROP === "true" :true
 
+export const DB_URL:string | undefined = process.env.DB_URL
+

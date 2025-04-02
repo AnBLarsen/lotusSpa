@@ -2,12 +2,13 @@ import { DataSource, Repository } from "typeorm"
 import { User } from "../entities/User"
 import { Credential } from "../entities/Credential"
 import { Appointment } from "../entities/Appointment"
-import { DB_NAME, DB_DROP, DB_ENTITIES, DB_HOST, DB_LOGGING, DB_PASSWORD, DB_PORT, DB_SYNC, DB_TYPE, DB_USERNAME } from "./envs"
+import { DB_NAME, DB_DROP, DB_ENTITIES, DB_HOST, DB_LOGGING, DB_PASSWORD, DB_PORT, DB_SYNC, DB_TYPE, DB_USERNAME, DB_URL } from "./envs"
 
 
 export const AppDataSource = new DataSource({
 
     type: DB_TYPE,
+    url:DB_URL,
     host:DB_HOST ,
     port: DB_PORT,
     username: DB_USERNAME,
